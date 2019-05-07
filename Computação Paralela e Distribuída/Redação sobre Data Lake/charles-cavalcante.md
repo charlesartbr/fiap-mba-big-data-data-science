@@ -27,3 +27,6 @@ O data lake atende a necessidade dos usuários que precisamos apenas de seus rel
 
 ## Data Lake se adapta facilmente
 No data warehouse as mudanças podem ser realizadas, porém podem ser demoradas ou ter um custo elevado, por exemplo adicionar uma nova coluna em uma tabela com bilhões de registros pode demorar muito tempo e consumir muito recurso. No data lake como os dados são armazenados no estado bruto é muito mais simples ser substituído ou modificado.
+
+## Data Lake possibilita mais análises
+O cientista de dados pode explorar dados que não são normalmente utilizados pela empresa para extrair informações importantes para a empresa, as possibilidades são muito maiores considerando que alguns tipos de dados nem sequer poderiam ser utilizados no data warehouse.
