@@ -24,3 +24,6 @@ No data warehouse os dados são bem estruturados e foram extraídos de sistemas 
 
 ## Data Lake atende a todos os usuários
 O data lake atende a necessidade dos usuários que precisamos apenas de seus relatórios já estruturados quanto aos cientistas de dados que poderão fazer análises mais profundas dos dados, utilizando ferramentas para análises estatisticas e de predição.
+
+## Data Lake se adapta facilmente
+No data warehouse as mudanças podem ser realizadas, porém podem ser demoradas ou ter um custo elevado, por exemplo adicionar uma nova coluna em uma tabela com bilhões de registros pode demorar muito tempo e consumir muito recurso. No data lake como os dados são armazenados no estado bruto é muito mais simples ser substituído ou modificado.
