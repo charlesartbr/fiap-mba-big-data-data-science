@@ -18,3 +18,6 @@ Dadas estas definições, podemos destacar as principais vantagens do data lake 
 
 ## Data Lake mantém todos os dados
 Enquanto no data warehouse nós inserimos somente os dados que já fazem sentido para o negócio e já estão estruturados e prontos para serem utilizados, no data lake inserimos todos os dados, mesmo os que nunca foram utilizados, pois eles podem ser utilizados um dia. No data lake podemos manter todos os dados e todo o histórico por ser muito mais fácil e barato para escalonar.
+
+## Data Lake suporta todos os tipos de dados
+No data warehouse os dados são bem estruturados e foram extraídos de sistemas transacionais na empresa. No data lake podemos adicionar todos os tipo de dados, estruturados (transacionais, tabelas), semi-estruturados (logs, xml, json) e não estruturados (textos, imagens, áudios, vídeos). Os dados serão transformados e modelados somente no momento de seu uso.
