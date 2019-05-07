@@ -21,3 +21,6 @@ Enquanto no data warehouse nós inserimos somente os dados que já fazem sentido
 
 ## Data Lake suporta todos os tipos de dados
 No data warehouse os dados são bem estruturados e foram extraídos de sistemas transacionais na empresa. No data lake podemos adicionar todos os tipo de dados, estruturados (transacionais, tabelas), semi-estruturados (logs, xml, json) e não estruturados (textos, imagens, áudios, vídeos). Os dados serão transformados e modelados somente no momento de seu uso.
+
+## Data Lake atende a todos os usuários
+O data lake atende a necessidade dos usuários que precisamos apenas de seus relatórios já estruturados quanto aos cientistas de dados que poderão fazer análises mais profundas dos dados, utilizando ferramentas para análises estatisticas e de predição.
