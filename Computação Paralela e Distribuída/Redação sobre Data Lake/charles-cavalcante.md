@@ -4,14 +4,14 @@ Para contextualizar as diferenças entre um Data Warehouse e um Dake Lake temos 
 
 ## Data Warehouse
 
-- Representa um modelo abstrato do negócio, organizado por áreas.
-- É altamente transformado e já possui modelos bem estruturados.
+- Representa um modelo abstrato do negócio, organizado por áreas;
+- É altamente transformado e já possui modelos bem estruturados;
 - Os dados não são carregados no data warehouse sem que o uso não tenha sido definido.
 
 ## Data Lake
 
-- Todos os dados da empresa são carregados de todas as fontes, nenhum dado é descartado.
-- Os dados são armazenados no formato original, sem modificações.
+- Todos os dados da empresa são carregados de todas as fontes, nenhum dado é descartado;
+- Os dados são armazenados no formato original, sem modificações;
 - Os dados são transformados e modelados para atender às necessidades de análise.
 
 Dadas estas definições, podemos destacar as principais vantagens do data lake nos aspectos a seguir.
@@ -30,3 +30,11 @@ No data warehouse as mudanças podem ser realizadas, porém podem ser demoradas 
 
 ## Data Lake possibilita mais análises
 O cientista de dados pode explorar dados que não são normalmente utilizados pela empresa para extrair informações importantes para a empresa, as possibilidades são muito maiores considerando que alguns tipos de dados nem sequer poderiam ser utilizados no data warehouse.
+
+Mesmo com todas estas vantagens do data lake com relação ao data warehouse, podemos destacar alguns itens que são uma desvantagem com relação ao modelo tradicional:
+
+## Desvantagens do Data Lake
+
+- maior complexidade para obtenção das informações, como os dados não estão todos estruturados algumas informações são mais difíceis de serem extraídas sem um conhecimento em programação;
+- infraestrutura muito mais complexa, enquanto no data warehouse podemos ter apenas um banco de dados relacional, no data lake precisamos de uma arquitetura muito mais complexa e de muitas ferramentas operando simultâneamente;
+- necessidade de profissionais altamente capacitados para configurar, extrair e analisar os dados.
