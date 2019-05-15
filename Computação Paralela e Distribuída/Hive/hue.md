@@ -1,10 +1,14 @@
 # Exercícios de Hive utilizando o Hue
 
 Exibir os bancos de dados:  
-`SHOW DATABASES;`
+```sql
+SHOW DATABASES;
+```
 
 Criar um banco de dados:  
-`CREATE DATABASE credit_card LOCATION '/db/credit_card';`
+```sql
+CREATE DATABASE credit_card LOCATION '/db/credit_card';
+```
 
 Criar uma tabela:
 ```sql
@@ -21,4 +25,9 @@ ROW FORMAT DELIMITED FIELDS TERMINATED BY '|'
 COLLECTION ITEMS TERMINATED BY ','  
 STORED AS TEXTFILE  
 LOCATION '/db/credit_card/transaction';
+```
+
+Criar uma partição:  
+```sql
+ALTER TABLE credit_card.transactions ADD PARTITION (dt=20170912);
 ```
