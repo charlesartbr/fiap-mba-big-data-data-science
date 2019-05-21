@@ -62,3 +62,14 @@ Select TOP 10 na tabela
 ```sql
 select * from credit_card.transactions_stage limit 10;
 ```
+
+importação de dados em lote a partir da tabela de stage
+```sql
+set hive.exec.dynamic.partition.mode=nonstrict;
+
+from credit_card.transactions_stage stg 
+insert into table credit_card.transactions 
+partition(dt) 
+select stg.ts, stg.card_id, stg.store, stg.status, stg.currency, stg.amount, 
+      cast(from_unixtime(unix_timestamp(stg.ts), 'YYYYmmdd') as bigint);
+```
