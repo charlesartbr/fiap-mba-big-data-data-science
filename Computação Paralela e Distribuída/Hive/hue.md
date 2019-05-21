@@ -57,3 +57,8 @@ row format delimited fields terminated by ','
 stored as textfile 
 location '/user/cloudera/importacao_20170912';
 ```
+
+Select TOP 10 na tabela 
+```sql
+select * from credit_card.transactions_stage limit 10;
+```
