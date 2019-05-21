@@ -73,3 +73,9 @@ partition(dt)
 select stg.ts, stg.card_id, stg.store, stg.status, stg.currency, stg.amount, 
       cast(from_unixtime(unix_timestamp(stg.ts), 'YYYYmmdd') as bigint);
 ```
+
+select com agregação
+```sql
+select store, count(1), sum(amount) from credit_card.transactions
+where dt=20170101 group by store;
+```
