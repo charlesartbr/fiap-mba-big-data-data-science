@@ -112,3 +112,11 @@ PARTITIONED BY (`datetime` BIGINT)
 STORED AS PARQUET
 location '/db/wol_parquet'
 ```
+
+importação dos dados
+```sql
+INSERT INTO logs_parquet PARTITION(`datetime`)
+SELECT server,url,device,browser,uuid,traits, 
+CAST(`datetime` as bigint)
+FROM logs;
+```
