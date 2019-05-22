@@ -79,3 +79,21 @@ select com agregação
 select store, count(1), sum(amount) from credit_card.transactions
 where dt=20170101 group by store;
 ```
+
+criação de tabela externa
+```sql
+create external table wol.logs (
+  server string,     
+  datetime TIMESTAMP,     
+  url string,     
+  device string,     
+  browser string,     
+  uuid string,
+  traits string
+) 
+ROW FORMAT DELIMITED
+FIELDS TERMINATED BY '|' 
+LINES TERMINATED BY '\n'
+STORED AS textfile
+location '/user/cloudera/wol';
+```
