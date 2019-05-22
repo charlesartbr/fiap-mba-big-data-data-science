@@ -97,3 +97,18 @@ LINES TERMINATED BY '\n'
 STORED AS textfile
 location '/user/cloudera/wol';
 ```
+
+criação de tabela parquet
+```sql
+create table wol.logs_parquet (
+  server string,     
+  url string,     
+  device string,     
+  browser string,     
+  uuid string,
+  traits string
+) 
+PARTITIONED BY (`datetime` BIGINT)
+STORED AS PARQUET
+location '/db/wol_parquet'
+```
