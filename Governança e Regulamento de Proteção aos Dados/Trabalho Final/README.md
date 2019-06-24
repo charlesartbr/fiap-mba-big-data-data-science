@@ -1,16 +1,23 @@
-## Regulatório e Compliance
+## Privacidade e Segurança
 
 **O uso do conceito faz sentido no contexto da empresa?**
-Regulatório não se aplica. Compliance sim, deve seguir as regras da remuneração variável.
+Sim, os dados são sigilosos.
 
 **Qual a situação atual? A empresa já utiliza o tema?**
-Existe regulamentação mas não é seguida por todos.
+Somente os gestores tem acesso aos dados de sua equipe.
 
 **Quais dores (problemas) serão tratadas por este tema?**
-Mitigação do risco de erro no pagamento da remuneração variável, evitando prejuíjos à empresa.
+As informações sobre quanto cada colaborador recebeu de RV não pode vazar
 
-**Regulações próprias do negócio da empresa**
-Existe uma instrução normativa com as regras para o cálculo da remuneração variável
+**Informações ou Sistemas ou Entidades de Negócio que deverão ser alvo de processo de controle**
+É necessário controle sobre o calculo
 
-**Sugestão de procedimentos para atendimento às necessidades regulatórias**
-Não se aplica
+**Sugestão de procedimentos para coleta, armazenamento e consumo desses dados**
+Niveis de permissão.
+
+### Resumo
+- Os dados dos valores de remuneração variável são pessoais e sigilosos
+- Somente os gestores devem ter acesso aos dados e somente de sua equipe
+- A informação sobre quanto colaborador recebeu de RV é sigilosa, um colaborador não pode saber o valor do outro
+- É necessário controle sobre o cálculo da RV de cada colaborador, em caso de ajuste ou alteração deve ser formalizado e justificado pelo gestor
+- O relatório de vendas de cada colaborador veem do ERP, devem ser validados pelo gestor
