@@ -46,3 +46,20 @@ Não se aplica.
 
 ### Resumo
 - os dados necessários para o calculo tem periodicidade mensal
+
+# Ajustes
+
+1) O professor comentou sobre prazos, sugestões:  
+- pg 2: Curto, médio e longo prazo, especificar, por exemplo: Curto prazo (3 meses), Médio prazo (6 meses), Longo prazo (1 ano);
+
+2) O professor comentou sobre metricas, sugestões:  
+- pg 3: informar métricas de medição de pagamentos feitos de forma errada; número de reclamações com relação a questionamento dos valores pagos;
+
+3) o professor comentou sobre não citar o LGPD em regulatorio, mas foi um adendo do Celo, não está no trabalho, não se aplica;
+
+4) o professor comentou sobre a estrutura de pessoal, sugestões:
+- remover Gerente de Governança;
+- citar que o RH precisa ter um papel mais relevante no processo;
+
+5) o professor comentou sobre Master Data, como não se aplica deve ser citado que não se aplica, sugestão:
+O uso deste conceito não aplica para esta área na empresa por ter apenas uma fonte de dados do cadastro de colaboradores.
