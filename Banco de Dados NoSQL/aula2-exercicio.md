@@ -1,6 +1,9 @@
 # Aula 2 - MongoDB
 
+## Create Collection
+```
 db.createCollection("user");
+```
 
 ## Insert
 ```
