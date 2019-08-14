@@ -1,17 +1,17 @@
 # Aula 2 - MongoDB
 
 ## Create Collection
-```
+```javascript
 db.createCollection("user");
 ```
 
 ## Insert
-```
+```javascript
 db.user.insert({ name: "Charles" });  
 db.user.insert({ name: "Charles", date: new Date() });  
 ```
 ## Update
-```
+```javascript
 // atualiza todo o documento  
 db.user.update({ name: "Charles" }, { name: "Charles", date: new ISODate() });  
 
@@ -26,7 +26,7 @@ db.user.update({ name: "Charles" }, { $set: { date: new ISODate() } }, { upsert:
 ```
 
 ## Find
-```
+```javascript
 db.user.find({}).pretty();  
 db.user.find({ name: "Charles" }).pretty();  
 db.user.findOne({ name: "Charles" });  
@@ -41,11 +41,11 @@ db.user.find({ $and: [{ name: "Charles" }, { date: { $exists: true } } ] });
 ```
 
 ## Remove
-```
+```javascript
 db.user.remove({ name: "Charles" });  
 ```
 
 ## Index
-```
+```javascript
 db.user.createIndex({ name: 1 })
 ```
