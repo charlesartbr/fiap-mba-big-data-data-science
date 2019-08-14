@@ -1,0 +1,165 @@
+/* 1 */
+{
+    "_id" : ObjectId("5d53682f898cf8e7dbb0db05"),
+    "nome" : "Charles Cavalcante",
+    "email" : "contato@charles.art.br",
+    "telefone" : "(11) 98765-4321",
+    "endereco" : {
+        "logradouro" : "Av. Paulista",
+        "numero" : "1106",
+        "complemento" : "7º andar",
+        "bairro" : "Cerqueira César",
+        "cep" : "01311-000",
+        "cidade" : "São Paulo",
+        "uf" : "SP"
+    },
+    "carrinho" : [ 
+        {
+            "idProduto" : ObjectId("5d5367f4898cf8e7dbb0db03"),
+            "nome" : "iPhone X",
+            "quantidade" : 1.0,
+            "valor" : 4581.81
+        }, 
+        {
+            "idProduto" : ObjectId("5d536801898cf8e7dbb0db04"),
+            "nome" : "Moto G7 Plus",
+            "quantidade" : 1.0,
+            "valor" : 1249.9
+        }
+    ],
+    "formaPagamento" : {
+        "tipo" : "Cartão de Crédito",
+        "bandeira" : "MasterCard",
+        "parcelas" : 12.0,
+        "numeroMascarado" : "5432-XXXX-XXXX-1234"
+    },
+    "status" : "Pagamento Confirmado"
+}
+
+/* 2 */
+{
+    "_id" : ObjectId("5d5369b3898cf8e7dbb0db07"),
+    "nome" : "João da Silva",
+    "email" : "joao@silva.art.br",
+    "telefone" : "(11) 98765-4321",
+    "status" : "Pedido Realizado",
+    "endereco" : {
+        "logradouro" : "Av. Paulista",
+        "numero" : "1106",
+        "complemento" : "7º andar",
+        "bairro" : "Cerqueira César",
+        "cep" : "01311-000",
+        "cidade" : "São Paulo",
+        "uf" : "SP"
+    },
+    "carrinho" : [ 
+        {
+            "idProduto" : ObjectId("5d5367f4898cf8e7dbb0db03"),
+            "nome" : "iPhone X",
+            "quantidade" : 1.0,
+            "valor" : 4581.81
+        }
+    ],
+    "formaPagamento" : {
+        "tipo" : "Cartão de Crédito",
+        "bandeira" : "MasterCard",
+        "parcelas" : 12.0,
+        "numeroMascarado" : "5432-XXXX-XXXX-1234"
+    }
+}
+
+/* 3 */
+{
+    "_id" : ObjectId("5d5369c6898cf8e7dbb0db08"),
+    "nome" : "Maria Clara",
+    "email" : "joao@silva.art.br",
+    "telefone" : "(11) 98765-4321",
+    "status" : "Cancelado",
+    "endereco" : {
+        "logradouro" : "Av. Paulista",
+        "numero" : "1106",
+        "complemento" : "7º andar",
+        "bairro" : "Cerqueira César",
+        "cep" : "01311-000",
+        "cidade" : "São Paulo",
+        "uf" : "SP"
+    },
+    "carrinho" : [ 
+        {
+            "idProduto" : ObjectId("5d536801898cf8e7dbb0db04"),
+            "nome" : "Moto G7 Plus",
+            "quantidade" : 1.0,
+            "valor" : 1249.9
+        }
+    ],
+    "formaPagamento" : {
+        "tipo" : "Cartão de Crédito",
+        "bandeira" : "MasterCard",
+        "parcelas" : 12.0,
+        "numeroMascarado" : "5432-XXXX-XXXX-1234"
+    }
+}
+
+/* 4 */
+{
+    "_id" : ObjectId("5d536a30898cf8e7dbb0db09"),
+    "nome" : "José Maria",
+    "email" : "jose@maria.com.br",
+    "telefone" : "(11) 98765-4321",
+    "status" : "Pagamento Confirmado",
+    "endereco" : {
+        "logradouro" : "Av. Paulista",
+        "numero" : "1106",
+        "complemento" : "7º andar",
+        "bairro" : "Cerqueira César",
+        "cep" : "01311-000",
+        "cidade" : "Belo Horizonte",
+        "uf" : "MG"
+    },
+    "carrinho" : [ 
+        {
+            "idProduto" : ObjectId("5d536801898cf8e7dbb0db04"),
+            "nome" : "Moto G7 Plus",
+            "quantidade" : 1.0,
+            "valor" : 1249.9
+        }
+    ],
+    "formaPagamento" : {
+        "tipo" : "Cartão de Crédito",
+        "bandeira" : "MasterCard",
+        "parcelas" : 12.0,
+        "numeroMascarado" : "5432-XXXX-XXXX-1234"
+    }
+}
+
+/* 5 */
+{
+    "_id" : ObjectId("5d536a5c898cf8e7dbb0db0a"),
+    "nome" : "Mauricio Mendes",
+    "email" : "mauricio@mendes.com.br",
+    "telefone" : "(11) 98765-4321",
+    "status" : "Pagamento Confirmado",
+    "endereco" : {
+        "logradouro" : "Av. Paulista",
+        "numero" : "1106",
+        "complemento" : "7º andar",
+        "bairro" : "Cerqueira César",
+        "cep" : "01311-000",
+        "cidade" : "Belo Horizonte",
+        "uf" : "MG"
+    },
+    "carrinho" : [ 
+        {
+            "idProduto" : ObjectId("5d536801898cf8e7dbb0db04"),
+            "nome" : "Moto G7 Plus",
+            "quantidade" : 1.0,
+            "valor" : 1249.9
+        }
+    ],
+    "formaPagamento" : {
+        "tipo" : "Cartão de Crédito",
+        "bandeira" : "MasterCard",
+        "parcelas" : 12.0,
+        "numeroMascarado" : "5432-XXXX-XXXX-1234"
+    }
+}
