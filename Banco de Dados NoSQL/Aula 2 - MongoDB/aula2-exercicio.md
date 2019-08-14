@@ -49,3 +49,12 @@ db.user.remove({ name: "Charles" });
 ```javascript
 db.user.createIndex({ name: 1 })
 ```
+
+## Aggregate
+```javascript
+db.pedidos.aggregate([
+    { $unwind: "$produtos" },
+    { $match: { status: "Pagamento Confirmado" } },
+    { $group: { _id: "$numeroPedido", total: { $sum: { $multiply: [ "$produtos.valor", "$produtos.quantidade" ] } } } }
+]);
+```

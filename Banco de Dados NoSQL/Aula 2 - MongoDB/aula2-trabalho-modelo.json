@@ -1,0 +1,40 @@
+{
+    "numeroPedido" : "5050",
+    "data": "2019-08-14 18:40",
+    "status" : "Pagamento Confirmado",
+    "cliente": {
+        "nome" : "Charles Cavalcante",
+        "email" : "contato@charles.art.br",
+        "cpf": "123.456.789-01",
+        "telefone" : "(11) 98765-4321",
+        "endereco" : {
+            "logradouro" : "Av. Paulista",
+            "numero" : "1106",
+            "complemento" : "7º andar",
+            "bairro" : "Cerqueira César",
+            "cep" : "01311-000",
+            "cidade" : "São Paulo",
+            "uf" : "SP"
+        }
+    },
+    "produtos" : [ 
+        {
+            "idProduto" : "5d5367f4898cf8e7dbb0db03",
+            "nome" : "iPhone X",
+            "quantidade" : 1.0,
+            "valor" : 4581.81
+        }, 
+        {
+            "idProduto" : "5d536801898cf8e7dbb0db04",
+            "nome" : "Moto G7 Plus",
+            "quantidade" : 1.0,
+            "valor" : 1249.9
+        }
+    ],
+    "formaPagamento" : {
+        "tipo" : "Cartão de Crédito",
+        "bandeira" : "MasterCard",
+        "parcelas" : 12.0,
+        "numeroMascarado" : "5432-XXXX-XXXX-1234"
+    }
+}
