@@ -3,10 +3,12 @@
 db.createCollection("user");
 
 ## Insert
+```
 db.user.insert({ name: "Charles" });  
 db.user.insert({ name: "Charles", date: new Date() });  
-
+```
 ## Update
+```
 // atualiza todo o documento  
 db.user.update({ name: "Charles" }, { name: "Charles", date: new ISODate() });  
 
@@ -18,8 +20,10 @@ db.user.update({ name: "Charles" }, { $set: { date: new ISODate() } }, { multi: 
 
 // upsert: se existir altera, se não existir insere  
 db.user.update({ name: "Charles" }, { $set: { date: new ISODate() } }, { upsert: true });  
+```
 
 ## Find
+```
 db.user.find({}).pretty();  
 db.user.find({ name: "Charles" }).pretty();  
 db.user.findOne({ name: "Charles" });  
@@ -29,11 +33,16 @@ db.user.find({ date: { $exists: true } });
 db.user.findOne({ name: /Ch/ });  
 db.user.find({}).sort({ nome: 1, date: -1 });  
 db.user.find({}).skip(2).limit(10);  
-db.user.find({ $or: [{ name: "Charles" }, { name: "Charless" } ] })
-db.user.find({ $and: [{ name: "Charles" }, { date: { $exists: true } } ] })
+db.user.find({ $or: [{ name: "Charles" }, { name: "Charless" } ] });  
+db.user.find({ $and: [{ name: "Charles" }, { date: { $exists: true } } ] });  
+```
 
 ## Remove
+```
 db.user.remove({ name: "Charles" });  
+```
 
 ## Index
+```
 db.user.createIndex({ name: 1 })
+```
