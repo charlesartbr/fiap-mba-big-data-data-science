@@ -9,8 +9,7 @@ da personalidade da pessoa natural.
 
 ## Quando entra em vigor?  
 
-Já entrou em vigor no dia 28 de dezembro de 2018, quanto aos arts. 
-55-A, 55-B, 55-C, 55-D, 55-E, 55-F, 55-G, 55-H, 55-I, 55-J, 55-K, 55-L, 58-A e 58-B.  
+Já entrou em vigor no dia 28 de dezembro de 2018, quanto aos artigos que tratam sobre a criação da Autoridade Nacional de Proteção de Dados (ANPD) e do Conselho Nacional de Proteção de Dados Pessoais e da Privacidade.
 
 Quanto aos demais artigos, inicialmente seria em 18 meses após a data da publicação (14 de agosto de 2018), 
 mas a Lei Nº 13.853, de 8 de julho de 2019 alterou o prazo para 24 meses, ou seja, em 14 de agosto de 2020.
