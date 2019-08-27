@@ -63,7 +63,7 @@ INSERT INTO users (id, name, email) VALUES (106, 'Lucy Liu','Liu@gmail.com');
 INSERT INTO messages (user_id, posted_on, user_name, body) VALUES (101, 1384895178, 'Miranda otto', 'Oi moça!');  
 INSERT INTO messages (user_id, posted_on, user_name, body) VALUES (101, 1384895319, 'Miranda otto', 'Oi, de novo;;;.');  
 INSERT INTO messages (user_id, posted_on, user_name, body) VALUES (104, 1384895222, 'Linda Evans', 'Você conhece a Miranda Otto?');  
-INSERT INTO messages (user_id, posted_on, user_name, body) VALUES (103, 1384895223, 'Lucy Liu', Comediante em Ally McBeal');  
+INSERT INTO messages (user_id, posted_on, user_name, body) VALUES (103, 1384895223, 'Lucy Liu', 'Comediante em Ally McBeal');  
 INSERT INTO messages (user_id, posted_on, user_name, body) VALUES (103, 1384895224, 'Lucy Liu', 'Filme de Ação com Tarantino');  
 INSERT INTO messages (user_id, posted_on, user_name, body) VALUES (103, 1384895225, 'Lucy Liu', 'Dra. Watson, no Sherlock');  
 INSERT INTO messages (user_id, posted_on, user_name, body) VALUES (103, 1384895226, 'Lucy Liu', 'E pintora famosa, mas com outro nome');  
