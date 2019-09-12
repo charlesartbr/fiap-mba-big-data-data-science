@@ -30,6 +30,10 @@ SELECT id_pedido, cliente_nome, cidade, uf, valor_total
 FROM relatorio1 
 WHERE id_loja=123 and data='2019-09-12' and hora=21;
 
+SELECT id_pedido, cliente_nome, cidade, uf, valor_total 
+FROM relatorio1 
+WHERE id_loja=123 and data='2019-09-12' and hora=21 and uf='SP';
+
 // 2) Produtos vendidos na ultima hora
 
 CREATE TABLE relatorio2 (

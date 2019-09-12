@@ -2,13 +2,11 @@
 
 **334409 - Charles Guimarães Cavalcante**
 
-Nossa plataforma de marketplace, deseja realizar algumas analises e relatórios sobre as vendas, produtos e lojas em tempo real (Near Real Time). 
-Dado o grande volume de informaçôes que serâo armazenadas, o Volume de escrita que será superior ao de leitura e forte necessídade de baixo tempo de resposta, 
-como responsaveis pela arquitetura dessa estrutura, vocês definiram o Cassandra como solução de armazenamento de Dados.
+Nossa plataforma de marketplace, deseja realizar algumas análises e relatórios sobre as vendas, produtos e lojas em tempo real (Near Real Time). Dado o grande volume de informações que serão armazenadas, o volume de escrita que será superior ao de leitura e forte necessidade de baixo tempo de resposta, como responsáveis pela arquitetura dessa estrutura, vocês definiram o Cassandra como solução de armazenamento de dados.
 
 ---
 
-### 1) Pedidos realizados na ultima hora por loja:
+### 1) Pedidos realizados na última hora por loja:
 
 Criação da tabela **relatorio1**, com uma partição primária composta pelo id da loja, data e hora. A clusterização mantém os dados em ordem inversa de pedido para retornar rapidamente os últimos pedidos.
 
