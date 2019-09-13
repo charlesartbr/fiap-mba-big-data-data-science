@@ -12,6 +12,10 @@ Added 1075 labels, created 1075 nodes, set 5726 properties, created 5443 relatio
 
 **2-Load_Squads_neo4j.txt**  
 ```
+<<<<<<< HEAD
+=======
+Code
+>>>>>>> cb884f221955c8598f441913e70ce3ec62c99db0
 Added 7213 labels, created 7213 nodes, set 14035 properties, created 9385 relationships, completed after 28782 ms.
 ```
 
