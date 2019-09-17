@@ -1,5 +1,13 @@
 # Aula 2 - MongoDB
 
+## Docker
+```
+docker pull mongo
+docker run -p 27017:27017 -d ###name aulamongo mongo
+docker exec -it aulamongo bash
+mongo
+```
+
 ## Create Collection
 ```javascript
 db.createCollection("user");
