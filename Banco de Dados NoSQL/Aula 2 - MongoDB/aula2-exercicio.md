@@ -3,7 +3,7 @@
 ## Docker
 ```
 docker pull mongo
-docker run -p 27017:27017 -d ###name aulamongo mongo
+docker run -p 27017:27017 -d --name aulamongo mongo
 docker exec -it aulamongo bash
 mongo
 ```
