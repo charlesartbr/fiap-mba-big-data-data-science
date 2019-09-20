@@ -61,6 +61,8 @@
 
 ## 3) Aplicativo de perfil de cliente
 
+### Modo 1: requisitos iniciais
+
 - Cliente
   - ClienteId (PK)
   - Usuario
@@ -71,8 +73,34 @@
   - Telefone
   - NumeroIdentidade
   - DataCriacao
-  - Dataalteracao
+  - DataAlteracao
   
+- AnaliseCadastral
+  - ClienteId (FK)
+  - Status
+  - Documento
+  - Analise
+  - Data
+
+### Modo 2: novos requisitos
+
+- Cliente
+  - ClienteId (PK)
+  - Nome
+  - Email
+  - Endereco
+  - Telefone
+  - NumeroIdentidade
+  - DataCriacao
+  - DataAlteracao
+
+- Login
+  - Usuario
+  - Senha
+  - Status
+  - DataCriacao
+  - DataAlteracao
+
 - AnaliseCadastral
   - ClienteId (FK)
   - Status
