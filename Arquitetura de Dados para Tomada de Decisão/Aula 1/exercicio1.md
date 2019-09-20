@@ -35,3 +35,18 @@
   - Versao (PK)
   - Nome
   - DataNascimento
+
+
+## 2) Como armazenar o registro de pagamentos em uma processadora de pagamentos, dado que uma compra pode ter várias tentativas de pagamento?
+
+### tabela auxiliar de histórico com todos os campos e data de alteração
+
+- Pedido
+  - PedidoId (PK)
+  - Data
+
+- Pagamento
+  - PedidoId (FK)
+  - FormaPagamento
+  - Status
+  - Data
