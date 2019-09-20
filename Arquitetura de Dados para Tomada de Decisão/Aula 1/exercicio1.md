@@ -39,14 +39,22 @@
 
 ## 2) Como armazenar o registro de pagamentos em uma processadora de pagamentos, dado que uma compra pode ter várias tentativas de pagamento?
 
-### tabela auxiliar de histórico com todos os campos e data de alteração
+### Modo 1: tabela auxiliar de histórico com todos os campos e data de alteração
 
-- Pedido
-  - PedidoId (PK)
+- Transacao
+  - TransacaoId (PK)
   - Data
 
 - Pagamento
-  - PedidoId (FK)
+  - TransacaoId (FK)
+  - FormaPagamento
+  - Status
+  - Data
+
+### Modo 2: tabela única com status
+
+- Transacao
+  - TransacaoId (PK)
   - FormaPagamento
   - Status
   - Data
