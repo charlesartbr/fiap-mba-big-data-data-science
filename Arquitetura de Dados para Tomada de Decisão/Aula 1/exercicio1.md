@@ -58,3 +58,24 @@
   - FormaPagamento
   - Status
   - Data
+
+## 3) Aplicativo de perfil de cliente
+
+- Cliente
+  - ClienteId (PK)
+  - Usuario
+  - Senha
+  - Nome
+  - Email
+  - Endereco
+  - Telefone
+  - NumeroIdentidade
+  - DataCriacao
+  - Dataalteracao
+  
+- AnaliseCadastral
+  - ClienteId (FK)
+  - Status
+  - Documento
+  - Analise
+  - Data
