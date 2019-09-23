@@ -56,3 +56,12 @@ Uma empresa que emprega o Big Data nas rotinas de prospecção tem um conhecimen
 ### Gerenciar os contatos
 
 Manter um mailing atualizado é fundamental para partir em busca de novas oportunidades. O uso do Big Data automatiza o processo de atualização e facilita o estabelecimento de bases confiáveis.  
+
+
+## Indicar um problema a ser resolvido pela sua empresa com o uso de Ciência de Dados (Algoritmos e Análises Preditivas) e apresentar os possíveis ganhos diretos com a solução do mesmo
+
+### Detectar fraude:
+
+A combinação de vários métodos analíticos pode melhorar a detecção de padrões e prevenir comportamentos criminosos. À medida que a segurança cibernética se torna uma preocupação cada vez maior, a análise comportamental de alta performance examina todas as ações em uma rede, em tempo real, para identificar anormalidades que podem indicar fraude, vulnerabilidades de dia zero e ameaças persistentes avançadas.
+
+Utilizando estas técnicas a taxa de fraude pode ser reduzida já de início em 50%, aumentando o ROI.
