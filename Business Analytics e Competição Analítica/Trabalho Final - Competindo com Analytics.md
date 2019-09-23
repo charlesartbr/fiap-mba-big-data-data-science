@@ -33,3 +33,26 @@ A plataforma MicroStrategy oferece todas as capacidades de que as organizações
 **- Desvantagens:** Interface do usuário pouco intuitiva.  
 **- Classificação Gartner Peer Insights:** 4.0  
 **- Preços:** a licença custa a partir de US$ 600 por usuário.  
+
+
+## 5 motivos que devem ser considerados e, que trarão algum diferencial para a empresa, para se criar um Ambiente de Big Data.
+
+### Aumentar o ROI
+
+Utilizar dados para o aumentar o ROI utilizando Big Data para desenvolver estratégias de vendas. Segundo pesquisa da revista Forbes, companhias que empregam o Big Data para desenvolver estratégias de vendas têm aumento de 15 a 20% no retorno de investimento (ROI).  
+
+### Melhorar a segmentação
+
+Utilizar o bid data para saber qual público a empresa quer e pode atingir, efetuando uma busca focada em seu público-alvo.  
+
+### Conhecer bem o cliente
+
+Conhecer o perfil da empresa – e falar com as pessoas certas – faz a diferença na hora de fechar ou não um contrato. Na correria do dia a dia, no entanto, nem sempre é possível manter uma base de prospects alimentada com essas informações. Soluções de Big Data fazem isso em poucos segundos. Uma rápida pesquisa traz informações valiosas como tamanho, tempo de mercado, faturamento, localização posicionamento de mercado, presença digital, profissionais responsáveis pelo negócio, entre outras.  
+
+### Fazer análises preditivas
+
+Uma empresa que emprega o Big Data nas rotinas de prospecção tem um conhecimento mais aprofundado sobre o cliente. Assim, pode prever seu comportamento e se concentrar nas ações de vendas que tenham melhores chances de resultados.  
+
+### Gerenciar os contatos
+
+Manter um mailing atualizado é fundamental para partir em busca de novas oportunidades. O uso do Big Data automatiza o processo de atualização e facilita o estabelecimento de bases confiáveis.  
