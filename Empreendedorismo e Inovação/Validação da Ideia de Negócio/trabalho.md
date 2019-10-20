@@ -20,14 +20,14 @@ Para validar a ideia foram elaboradas as questões abaixo:
 
 **3) Dado a dificuldade de comparação de preços, você realiza a sua compra toda no mesmo supermercado, mesmo sabendo que alguns itens podem estar mais caros do que em outro lugar?**  
     - para validar se o problema existe e como o usuário faz para resolver  
-    - quem realiza a compra toda no mesmo lugar mesmo sabendo que há prejuizo pode ser um usuário mais difícil de se convercer
+    - quem realiza a compra toda no mesmo lugar mesmo sabendo que há prejuízo pode ser um usuário mais difícil de se convencer
 
 **4) Se houvesse uma forma de comparar os preços antecipadamente, você dividiria a sua compra em alguns supermercados visando gastar menos?**  
-    - para validar se o problema será resolvido, pois o objetivo é justamente fazer com que a pessoa dividade a compra visando minimizar o preço.
+    - para validar se o problema será resolvido, pois o objetivo é justamente fazer com que a pessoa divida a compra visando minimizar o preço.
 
-**5) Você realiza compras de supermercado on-line? Com qual frequencia?**  
+**5) Você realiza compras de supermercado on-line? Com qual frequência?**  
     - para verificar se o usuário já utiliza serviços de compra on-line  
-    - para verificar a frequencia de utilização
+    - para verificar a frequência de utilização
 
 **6) Caso não realize as compras on-line, você o faria caso o objetivo seja pagar menos?**  
     - para validar a aceitação de compra on-line, que aumenta a rentabilidade do aplicativo 
@@ -52,7 +52,7 @@ Sim para todos os entrevistados, principalmente por terem sido escolhidos previa
 **83,3%** informaram que utilizariam o serviço.  
 **16,6%** informaram que não se dariam ao trabalho.  
 
-**5) Você realiza compras de supermercado on-line? Com qual frequencia?**  
+**5) Você realiza compras de supermercado on-line? Com qual frequência?**  
 **50%** informaram que realizam compras on-line, porém somente de forma esporádica e emergencial.  
 **50%** informaram que não realizam compras on-line.
 
