@@ -1,4 +1,4 @@
-# Projeto de Plano de Midia
+# Projeto de Plano de Mídia
 
 ### Charles Guimarães Cavalcante - RM 334409
 
@@ -17,7 +17,7 @@ Para as campanhas foi definido o seguinte público-alvo:
 - pessoas entre 25 e 44 anos
 - somente cidade de São Paulo
 - segmentos:
-    - comparador de precios de supermercados
+    - comparador de preços de supermercados
     - lista de compras para supermercado
 
 Com esta segmentação a expectativa é chegar a um CTR médio de 0,5%.
@@ -34,26 +34,28 @@ O ROI é negativo considerando apenas uma compra por cliente.
 
 ## ECPM médio da campanha
 
-Foram considerados para o cálculo 7 dias de campanha. Foram calculados compras por CPM e CPC, CPA não foi calculo por não ser possível para este tipo de campanha.
+Foram considerados para o cálculo 5 dias de campanha. Foram calculadas compras por CPM e CPC, CPA não foi calculado por não ser possível para este tipo de campanha.
 
 O **ECPM médio** para a campanha com compra por **CPM** ficou em **R$ 1,50**. Considerando a média de **R$ 1,50** por mil impressões.
 
-O **ECPM médio** para a campanha com compra por **CPC** ficou em **R$ 4,97**. Considerando a média de **R$ 1,00** por clique.
+O **ECPM médio** para a campanha com compra por **CPC** ficou em **R$ 4,94**. Considerando a média de **R$ 1,00** por clique.
 
 ${ ECPM.xlsx }$
 
 ## Análise da viabilidade a curto prazo do projeto com base no custo do "cliente"
 
-Levando em consideração que o ticket médio é bem baixo, o custo de aquisição do cliente é muito alto, ficando praticamente com prejuizo com a campanha no curto prazo. É mais viável a compra por CPM, principalmente no início, pois precisamos tornar a marca conhecida e precisamos de mais impressões.
+Levando em consideração que o ticket médio é bem baixo, o custo de aquisição do cliente é muito alto, ficando praticamente com prejuízo com a campanha no curto prazo. É mais viável a compra por CPM, principalmente no início, pois precisamos tornar a marca conhecida e precisamos de mais impressões.
 
 ## Análise a longo prazo levando em conta o LTV - Life Time Value
 
 Cada cliente adquirido tem um grande potencial de compras futuras, pois a ideia do aplicativo é ajudar o usuário a ter redução de preços nas suas compras mensais.
 
-Considerando que em usuário realizará em média 10 compras via o aplicativo, o nosso LTV será de:
+Considerando que um usuário realizará em média 10 compras via o aplicativo, o nosso LTV será de:
 
 **LTV = R$ 9,00 * 10 = R$ 90,00**
 
 Com este valor aumentamos muito a viabilidade do negócio, no curto prazo o custo de aquisição ficou muito elevado, porém, com este valor de LTV o custo fica totalmente viável, elevando em muito o valor do ROI, de **-40%** para **500%** no **CPM** e de **-82%** para** 80%** no **CPC**.
+
+A seguir o ROI recalculado considerando um ticket médio de **R$ 90** ao invés de **R$ 9** calculado inicialmente.
 
 ${ ROI.xlsx }$
