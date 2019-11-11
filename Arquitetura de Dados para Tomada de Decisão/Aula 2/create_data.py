@@ -90,5 +90,5 @@ def create_transactions(total_transactions, users):
     print(len(transactions), 'transactions saved to csv')
 
 # create data
-users = create_users(1000)
-create_transactions(100000, users)
+users = create_users(1_000_000)
+create_transactions(10_000_000, users)
