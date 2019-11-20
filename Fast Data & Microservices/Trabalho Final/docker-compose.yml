@@ -1,0 +1,20 @@
+version: '2'
+
+services:
+    
+  database:
+    build: database/.
+    ports:
+      - "27017:27017"  
+    
+  api:
+    build: api/.
+    ports:
+      - "3000:3000"
+    links:
+      - database
+
+  app:
+    build: app/.
+    ports:
+      - "4200:4200"

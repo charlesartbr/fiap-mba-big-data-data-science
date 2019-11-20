@@ -1,0 +1,30 @@
+<header class="text-center py-3" style="background-color: #e91c5d; color: white; font-weight: bold; font-size: 2em;">
+    FIAP APP
+</header>
+
+<div class="container my-5">
+
+    <h1 class="mb-4">Alunos</h1>
+
+    <form class="form-inline" #form="ngForm" (ngSubmit)="cadastrar()">
+        <input type="text" [(ngModel)]="nome" name="nome" placeholder="Nome" class="form-control mr-2" required />
+        <input type="text" [(ngModel)]="rm" name="rm" placeholder="RM" class="form-control mr-2" required />
+        <button type="submit" class="btn btn-success">Cadastrar</button>
+    </form>
+
+    <table *ngIf="alunos" class="table table-striped mt-4">
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>RM</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let aluno of alunos">
+                <td>{{ aluno.nome }}</td>
+                <td>{{ aluno.rm }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+</div>
