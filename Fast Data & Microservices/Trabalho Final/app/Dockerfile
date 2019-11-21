@@ -10,4 +10,4 @@ RUN npm install
 
 EXPOSE 4200
 
-CMD ["npm", "start"]
+CMD ["./wait-for-it.sh", "api:3000", "--", "npm", "start"]
