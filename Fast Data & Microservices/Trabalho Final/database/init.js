@@ -1,7 +1,6 @@
 let res = [
     db.createCollection("alunos"),
-    db.alunos.insert({ "nome": "Charles", "rm": "334409" }),
-    db.alunos.insert({ "nome": "Aline", "rm": "334407" })
+    db.alunos.insert({ "nome": "Charles Cavalcante", "rm": "334409" })
 ];
 
 print('------------------------------------');

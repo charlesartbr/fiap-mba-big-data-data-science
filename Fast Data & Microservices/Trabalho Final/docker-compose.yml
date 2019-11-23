@@ -3,18 +3,24 @@ version: '2'
 services:
     
   database:
-    build: database/.
+    image: charlesartbr/fiap-database
     ports:
       - "27017:27017"  
+    volumes:
+      - /data/fiap:/data/db
     
   api:
-    build: api/.
+    image: charlesartbr/fiap-api
     ports:
       - "3000:3000"
+    depends_on:
+      - database
     links:
       - database
 
   app:
-    build: app/.
+    image: charlesartbr/fiap-app
     ports:
       - "4200:4200"
+    depends_on:
+      - api

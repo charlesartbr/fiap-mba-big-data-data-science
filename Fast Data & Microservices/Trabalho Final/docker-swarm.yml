@@ -1,0 +1,33 @@
+version: '3'
+
+services:
+
+  api:
+    image: charlesartbr/fiap-api
+    ports:
+      - "3000:3000"
+    depends_on:
+      - database
+    links:
+      - database
+    deploy:
+      replicas: 3
+      mode: replicated
+
+  app:
+    image: charlesartbr/fiap-app
+    ports:
+      - "4200:4200"
+    depends_on:
+      - api
+    deploy:
+      replicas: 3
+      mode: replicated
+
+  database:
+    image: charlesartbr/fiap-database
+    ports:
+      - "27017:27017"  
+    deploy:
+      replicas: 1
+      mode: replicated
