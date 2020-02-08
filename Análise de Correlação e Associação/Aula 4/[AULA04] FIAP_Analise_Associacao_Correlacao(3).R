@@ -119,7 +119,8 @@ library(MASS)
 library(leaps)
 library(relaimpo)
 library(bootstrap)
-bhd<-read_excel("Boston_Housing_Data.xlsx", sheet = "Boston_Housing_Data")
+
+bhd<-read.csv("Boston_Housing_Data.csv")
 View(bhd)
 round(cor(bhd[,c(-1,-2)]),2)
 corrplot(round(cor(bhd[,c(-1,-2)]),2),method = "square")
@@ -225,7 +226,7 @@ print(head(IV$Summary, 10), row.names = FALSE)
 print(IV$Tables$experiencia_cl, row.names = FALSE) #Apenas para exemplificar
 
 #Calculo da correlacao entre as variaveis
-matriz_correl <- round(cor(empbanc[,2:7]), 2)
+matriz_correl <- round(cor(empbanc[,2:9]), 2)
 matriz_correl
 install.packages("corrplot")
 library(corrplot)
