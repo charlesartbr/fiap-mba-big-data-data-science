@@ -1,0 +1,196 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/gocare/ontologies#"
+     xml:base="http://www.semanticweb.org/gocare/ontologies"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/gocare/ontologies"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/gocare/ontologies/belongsTo -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/gocare/ontologies/belongsTo">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/gocare/ontologies/hasVehicle"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/gocare/ontologies/hasCreditCard -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/gocare/ontologies/hasCreditCard">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/gocare/ontologies/hasMedicalSpecialty -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/gocare/ontologies/hasMedicalSpecialty">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/gocare/ontologies/hasOwner -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/gocare/ontologies/hasOwner">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/gocare/ontologies/hasPatient -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/gocare/ontologies/hasPatient">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/gocare/ontologies/isPatientOf"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/gocare/ontologies/hasVehicle -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/gocare/ontologies/hasVehicle">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/gocare/ontologies/isPatientOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/gocare/ontologies/isPatientOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/gocare/ontologies/isServiceOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/gocare/ontologies/isServiceOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://schema.org/CreditCard -->
+
+    <owl:Class rdf:about="http://schema.org/CreditCard">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/gocare/ontologies/hasOwner"/>
+                <owl:someValuesFrom rdf:resource="http://schema.org/Patient"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://schema.org/Hospital -->
+
+    <owl:Class rdf:about="http://schema.org/Hospital">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/gocare/ontologies/hasPatient"/>
+                <owl:someValuesFrom rdf:resource="http://schema.org/Patient"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://schema.org/MedicalSpecialty -->
+
+    <owl:Class rdf:about="http://schema.org/MedicalSpecialty">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/gocare/ontologies/isServiceOf"/>
+                <owl:someValuesFrom rdf:resource="http://schema.org/Hospital"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://schema.org/Patient -->
+
+    <owl:Class rdf:about="http://schema.org/Patient">
+        <rdfs:subClassOf rdf:resource="http://schema.org/Person"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/gocare/ontologies/hasMedicalSpecialty"/>
+                <owl:someValuesFrom rdf:resource="http://schema.org/MedicalSpecialty"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/gocare/ontologies/hasCreditCard"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://schema.org/CreditCard"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://schema.org/Person -->
+
+    <owl:Class rdf:about="http://schema.org/Person"/>
+    
+
+
+    <!-- http://schema.org/Vehicle -->
+
+    <owl:Class rdf:about="http://schema.org/Vehicle">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/gocare/ontologies/belongsTo"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/gocare/ontologies/Driver"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gocare/ontologies/Driver -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gocare/ontologies/Driver">
+        <rdfs:subClassOf rdf:resource="http://schema.org/Person"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/gocare/ontologies/hasVehicle"/>
+                <owl:someValuesFrom rdf:resource="http://schema.org/Vehicle"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

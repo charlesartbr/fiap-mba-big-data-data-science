@@ -1,0 +1,236 @@
+Prefix: owl: <http://www.w3.org/2002/07/owl#>
+Prefix: rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+Prefix: xml: <http://www.w3.org/XML/1998/namespace>
+Prefix: xsd: <http://www.w3.org/2001/XMLSchema#>
+Prefix: rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+Prefix: metro: <http://www.semanticweb.org/ontologies/2014/5/metro#>
+
+
+
+Ontology: <http://www.semanticweb.org/ontologies/2014/5/metro>
+
+
+ObjectProperty: metro:temAdjacente
+
+    Characteristics: 
+        Irreflexive,
+        Symmetric
+    
+    Domain: 
+        metro:Estacao
+    
+    Range: 
+        metro:Estacao
+    
+    
+ObjectProperty: metro:temLinha
+
+    Characteristics: 
+        InverseFunctional
+    
+    Domain: 
+        metro:RedeMetro
+    
+    Range: 
+        metro:Linha
+    
+    
+ObjectProperty: metro:redeTemEstacao
+
+    SubPropertyChain: 
+        metro:temLinha o metro:temEstacao
+    
+    Domain: 
+        metro:RedeMetro
+    
+    Range: 
+        metro:Estacao
+    
+    
+ObjectProperty: metro:pertenceLinha
+
+    InverseOf: 
+        metro:temEstacao
+    
+    
+ObjectProperty: metro:temEstacao
+
+    Domain: 
+        metro:Linha
+    
+    Range: 
+        metro:Estacao
+    
+    InverseOf: 
+        metro:pertenceLinha
+    
+    
+Class: owl:Thing
+
+    
+Class: metro:Linha
+
+    SubClassOf: 
+        metro:temEstacao exactly 2 metro:Terminal
+    
+    DisjointWith: 
+        metro:RedeMetro, metro:Estacao
+    
+    
+Class: metro:RedeMetro
+
+    DisjointWith: 
+        metro:Linha, metro:Estacao
+    
+    
+Class: metro:Estacao
+
+    SubClassOf: 
+        metro:pertenceLinha some metro:Linha
+    
+    DisjointWith: 
+        metro:Linha, metro:RedeMetro
+    
+    
+Class: metro:Interface
+
+    EquivalentTo: 
+        metro:Estacao
+         and (metro:pertenceLinha min 2 owl:Thing)
+    
+    SubClassOf: 
+        metro:Estacao
+    
+    
+Class: metro:Terminal
+
+    EquivalentTo: 
+        metro:Estacao
+         and (metro:temAdjacente exactly 1 owl:Thing)
+    
+    SubClassOf: 
+        metro:Estacao
+    
+    
+Class: metro:Normal
+
+    EquivalentTo: 
+        metro:Estacao
+         and (metro:temAdjacente exactly 2 owl:Thing)
+    
+    SubClassOf: 
+        metro:Estacao
+    
+    
+Class: metro:LinhaMetroLisboa
+
+    EquivalentTo: 
+        {metro:amarela , metro:azul , metro:verde , metro:vermelha}
+    
+    SubClassOf: 
+        metro:Linha
+    
+    
+Individual: metro:BaixaChiado
+
+    Types: 
+        metro:Estacao
+    
+    
+Individual: metro:RedeMetroLisboa
+
+    Types: 
+        metro:RedeMetro,
+        metro:temLinha only metro:LinhaMetroLisboa,
+        metro:temLinha exactly 4 metro:LinhaMetroLisboa
+    
+    
+Individual: metro:azul
+
+    Types: 
+        metro:LinhaMetroLisboa
+    
+    
+Individual: metro:amarela
+
+    Types: 
+        metro:LinhaMetroLisboa
+    
+    
+Individual: metro:Intendente
+
+    Types: 
+        metro:Estacao,
+        metro:temAdjacente exactly 2 owl:Thing
+    
+    Facts:  
+     metro:temAdjacente  metro:MartimMoniz,
+     metro:temAdjacente  metro:Anjos,
+     metro:pertenceLinha  metro:verde
+    
+    
+Individual: metro:MartimMoniz
+
+    
+Individual: metro:CaisSodre
+
+    Types: 
+        metro:Estacao,
+        metro:temAdjacente exactly 1 owl:Thing
+    
+    Facts:  
+     metro:temAdjacente  metro:BaixaChiado,
+     metro:pertenceLinha  metro:verde
+    
+    
+Individual: metro:verde
+
+    Types: 
+        metro:LinhaMetroLisboa
+    
+    
+Individual: metro:Telheiras
+
+    Types: 
+        metro:Estacao,
+        metro:temAdjacente exactly 1 owl:Thing
+    
+    Facts:  
+     metro:temAdjacente  metro:CampoGrande,
+     metro:pertenceLinha  metro:verde
+    
+    
+Individual: metro:vermelha
+
+    Types: 
+        metro:LinhaMetroLisboa
+    
+    
+Individual: metro:CampoGrande
+
+    Types: 
+        metro:Estacao
+    
+    Facts:  
+     metro:pertenceLinha  metro:amarela,
+     metro:pertenceLinha  metro:verde
+    
+    
+Individual: metro:Areeiro
+
+    Types: 
+        metro:temAdjacente some 
+            ((not (metro:Terminal))
+             and (not (metro:pertenceLinha value metro:amarela))),
+        metro:Estacao
+    
+    
+Individual: metro:Anjos
+
+    
+DifferentIndividuals: 
+    metro:Anjos,metro:Areeiro,metro:BaixaChiado,metro:CaisSodre,metro:CampoGrande,metro:Intendente,metro:MartimMoniz,metro:Telheiras
+
+DifferentIndividuals: 
+    metro:amarela,metro:azul,metro:verde,metro:vermelha
+
