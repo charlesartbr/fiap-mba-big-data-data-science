@@ -5,7 +5,8 @@
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:ontologies="http://www.semanticweb.org/gocare/ontologies/">
     <owl:Ontology rdf:about="http://www.semanticweb.org/gocare/ontologies"/>
     
 
@@ -18,6 +19,12 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    
+
+
+    <!-- http://www.semanticweb.org/gocare/ontologies#hasMedicalCondition -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/gocare/ontologies#hasMedicalCondition"/>
     
 
 
@@ -34,6 +41,7 @@
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/gocare/ontologies/hasCreditCard">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/gocare/ontologies/hasOwner"/>
     </owl:ObjectProperty>
     
 
@@ -104,7 +112,7 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/gocare/ontologies/hasOwner"/>
-                <owl:someValuesFrom rdf:resource="http://schema.org/Patient"/>
+                <owl:allValuesFrom rdf:resource="http://schema.org/Patient"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -120,7 +128,20 @@
                 <owl:someValuesFrom rdf:resource="http://schema.org/Patient"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/gocare/ontologies/hasMedicalSpecialty"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://schema.org/MedicalSpecialty"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
+    
+
+
+    <!-- http://schema.org/MedicalCondition -->
+
+    <owl:Class rdf:about="http://schema.org/MedicalCondition"/>
     
 
 
@@ -143,8 +164,8 @@
         <rdfs:subClassOf rdf:resource="http://schema.org/Person"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/gocare/ontologies/hasMedicalSpecialty"/>
-                <owl:someValuesFrom rdf:resource="http://schema.org/MedicalSpecialty"/>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/gocare/ontologies#hasMedicalCondition"/>
+                <owl:someValuesFrom rdf:resource="http://schema.org/MedicalCondition"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -180,14 +201,127 @@
     <!-- http://www.semanticweb.org/gocare/ontologies/Driver -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/gocare/ontologies/Driver">
-        <rdfs:subClassOf rdf:resource="http://schema.org/Person"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/gocare/ontologies/hasVehicle"/>
-                <owl:someValuesFrom rdf:resource="http://schema.org/Vehicle"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://schema.org/Person"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/gocare/ontologies/hasVehicle"/>
+                        <owl:someValuesFrom rdf:resource="http://schema.org/Vehicle"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
     </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/gocare/ontologies#Cardiologia -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gocare/ontologies#Cardiologia">
+        <rdf:type rdf:resource="http://schema.org/MedicalSpecialty"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gocare/ontologies#Clínico_Geral -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gocare/ontologies#Clínico_Geral">
+        <rdf:type rdf:resource="http://schema.org/MedicalSpecialty"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gocare/ontologies#Diabetes -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gocare/ontologies#Diabetes">
+        <rdf:type rdf:resource="http://schema.org/MedicalCondition"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gocare/ontologies#Hospital_Santa_Catarina -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gocare/ontologies#Hospital_Santa_Catarina">
+        <rdf:type rdf:resource="http://schema.org/Hospital"/>
+        <ontologies:hasMedicalSpecialty rdf:resource="http://www.semanticweb.org/gocare/ontologies#Cardiologia"/>
+        <ontologies:hasMedicalSpecialty rdf:resource="http://www.semanticweb.org/gocare/ontologies#Pronto_Socorro"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gocare/ontologies#Hospital_São_Luiz -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gocare/ontologies#Hospital_São_Luiz">
+        <rdf:type rdf:resource="http://schema.org/Hospital"/>
+        <ontologies:hasMedicalSpecialty rdf:resource="http://www.semanticweb.org/gocare/ontologies#Cardiologia"/>
+        <ontologies:hasMedicalSpecialty rdf:resource="http://www.semanticweb.org/gocare/ontologies#Clínico_Geral"/>
+        <ontologies:hasMedicalSpecialty rdf:resource="http://www.semanticweb.org/gocare/ontologies#Ortopedista"/>
+        <ontologies:hasMedicalSpecialty rdf:resource="http://www.semanticweb.org/gocare/ontologies#Pronto_Socorro"/>
+        <ontologies:hasPatient rdf:resource="http://www.semanticweb.org/gocare/ontologies#Maria_Santos"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gocare/ontologies#José_Silva -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gocare/ontologies#José_Silva">
+        <rdf:type rdf:resource="http://schema.org/Person"/>
+        <ontologies:hasVehicle rdf:resource="http://www.semanticweb.org/gocare/ontologies#Tesla"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gocare/ontologies#Maria_Santos -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gocare/ontologies#Maria_Santos">
+        <rdf:type rdf:resource="http://schema.org/Patient"/>
+        <hasMedicalCondition rdf:resource="http://www.semanticweb.org/gocare/ontologies#Diabetes"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gocare/ontologies#MasterCard_5005-xxxx-5050 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gocare/ontologies#MasterCard_5005-xxxx-5050">
+        <rdf:type rdf:resource="http://schema.org/CreditCard"/>
+        <ontologies:hasOwner rdf:resource="http://www.semanticweb.org/gocare/ontologies#Maria_Santos"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gocare/ontologies#Ortopedista -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gocare/ontologies#Ortopedista">
+        <rdf:type rdf:resource="http://schema.org/MedicalSpecialty"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gocare/ontologies#Pronto_Socorro -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gocare/ontologies#Pronto_Socorro">
+        <rdf:type rdf:resource="http://schema.org/MedicalSpecialty"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gocare/ontologies#Tesla -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gocare/ontologies#Tesla">
+        <rdf:type rdf:resource="http://schema.org/Vehicle"/>
+    </owl:NamedIndividual>
 </rdf:RDF>
 
 
