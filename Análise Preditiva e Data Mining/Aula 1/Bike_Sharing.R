@@ -1,4 +1,4 @@
-data <- read.csv(file = 'Bike_Sharing.csv')
+data <- read.(file = 'Bike_Sharing.csv')
 
 View(data)
 
